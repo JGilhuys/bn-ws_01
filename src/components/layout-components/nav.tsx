@@ -9,19 +9,19 @@ export default function Nav(){
         <section className="w-full p-6 flex flex-row items-center justify-between">
             <div className="p-2 bg-white border rounded-xl drop-shadow-xl">
                 <Link href={"/"}>
-                    <Image src={logoImg.src} width={128} height={128} alt="The Ball Noir logo" priority />          
+                    <Image src={logoImg.src} width={128} height={128} alt="The Ball Noir logo" priority/>          
                 </Link>
             </div>
             <div>
                 <ul>
                     <li>
-                        <Link href={"/products"}>Products</Link>
+                        <Link href={"/products"} className="font-CinzelDecorative text-lg">Products</Link>
                     </li>
                 </ul>
             </div>
             <div>
-                <button>Cart</button>
-                <Link href={"/account"}>Account</Link>
+                <button className="font-CinzelDecorative">Cart</button>
+                <Link href={"/account"} className="font-CinzelDecorative">Account</Link>
             </div>
         </section>
         <hr className="h-px mx-8 bg-gray-300 border-0 dark:bg-gray-700"></hr>
