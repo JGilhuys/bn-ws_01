@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./globals.css";
 import Nav from "@/components/layout-components/nav";
+
+config.autoAddCss = false;
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Nav />
-        {children}</body>
+      <body className={inter.className + " w-full h-screen"}>
+        <main className="max-w-7xl m-auto">
+          <Nav />
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
